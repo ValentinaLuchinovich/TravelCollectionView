@@ -13,6 +13,9 @@
 		6EFD30EA274E4AB300CC1C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFD30E8274E4AB300CC1C65 /* Main.storyboard */; };
 		6EFD30EC274E4AB400CC1C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EFD30EB274E4AB400CC1C65 /* Assets.xcassets */; };
 		6EFD30EF274E4AB400CC1C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFD30ED274E4AB400CC1C65 /* LaunchScreen.storyboard */; };
+		6EFD30F7274E4CE000CC1C65 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD30F6274E4CE000CC1C65 /* GalleryCollectionView.swift */; };
+		6EFD30FB274E6EB600CC1C65 /* GallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD30FA274E6EB600CC1C65 /* GallaryCollectionViewCell.swift */; };
+		6EFD30FD274E7E8400CC1C65 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD30FC274E7E8400CC1C65 /* TravelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6EFD30EB274E4AB400CC1C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EFD30EE274E4AB400CC1C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EFD30F0274E4AB400CC1C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EFD30F6274E4CE000CC1C65 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		6EFD30FA274E6EB600CC1C65 /* GallaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6EFD30FC274E7E8400CC1C65 /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,9 @@
 		6EFD30D6274E4AB300CC1C65 = {
 			isa = PBXGroup;
 			children = (
+				6EFD30FC274E7E8400CC1C65 /* TravelModel.swift */,
+				6EFD30FA274E6EB600CC1C65 /* GallaryCollectionViewCell.swift */,
+				6EFD30F6274E4CE000CC1C65 /* GalleryCollectionView.swift */,
 				6EFD30E1274E4AB300CC1C65 /* TravelCollectionView */,
 				6EFD30E0274E4AB300CC1C65 /* Products */,
 			);
@@ -139,6 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFD30E7274E4AB300CC1C65 /* ViewController.swift in Sources */,
+				6EFD30F7274E4CE000CC1C65 /* GalleryCollectionView.swift in Sources */,
+				6EFD30FB274E6EB600CC1C65 /* GallaryCollectionViewCell.swift in Sources */,
+				6EFD30FD274E7E8400CC1C65 /* TravelModel.swift in Sources */,
 				6EFD30E3274E4AB300CC1C65 /* AppDelegate.swift in Sources */,
 				6EFD30E5274E4AB300CC1C65 /* SceneDelegate.swift in Sources */,
 			);
