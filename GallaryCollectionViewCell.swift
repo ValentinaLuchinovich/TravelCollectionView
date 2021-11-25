@@ -9,6 +9,7 @@ import UIKit
 
 class GallaryCollectionViewCell: UICollectionViewCell {
     
+    
     // Создаём идентификатор
     static let reuseID = "GallaryCollectionViewCell"
     
@@ -30,17 +31,21 @@ class GallaryCollectionViewCell: UICollectionViewCell {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    } ()
+    }()
     
-    // Создаем текстовый фрейм с информацией о путешествии
     let descriptionOfTravel: UITextView = {
         let description = UITextView()
+        description.sizeToFit()
+        description.isScrollEnabled = false
         description.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         description.textColor = .lightGray
         description.translatesAutoresizingMaskIntoConstraints = false
-        
         return description
-    } ()
+    }()
+    
+    
+    // Создаем текстовый фрейм с информацией о путешествии
+
     
     // Создаем инициализатор с параметром frame
     override init(frame: CGRect) {
@@ -52,7 +57,8 @@ class GallaryCollectionViewCell: UICollectionViewCell {
         addSubview(nameLabel)
         // Добавляем описание в ячейку
         addSubview(descriptionOfTravel)
-        
+       
+        backgroundColor = .white
         
         // Расставляем констрейнты для изображения
         mainimageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -66,6 +72,25 @@ class GallaryCollectionViewCell: UICollectionViewCell {
         nameLabel.topAnchor.constraint(equalTo: mainimageView.bottomAnchor, constant: 15).isActive = true
         
         //Расставляем констрейнты для текста
+        descriptionOfTravel.topAnchor.constraint(equalTo: mainimageView.bottomAnchor, constant: 30 + nameLabel.font.pointSize).isActive = true
+        descriptionOfTravel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        descriptionOfTravel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        descriptionOfTravel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40).isActive = true
+    }
+    
+    //Изменяем дизайн ячеек
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //Закругляем углы ячеек
+        self.layer.cornerRadius = 5
+        // Добавляем тень
+        self.layer.shadowRadius = 9
+        // Устанавливаем прозрачность/размытие тени
+        layer.shadowOpacity = 0.3
+        // Задаем расположение тени
+        layer.shadowOffset = CGSize(width: 5, height: 8)
+        // Задаем границы представления
+        self.clipsToBounds = false
     }
     
     required init?(coder: NSCoder) {

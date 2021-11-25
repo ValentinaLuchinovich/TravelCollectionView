@@ -21,9 +21,7 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         // Выбираем горизонтальный скролл ячеек
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
-        
-        backgroundColor = UIColor.blue
-        
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         delegate = self
         dataSource = self
         
@@ -64,7 +62,7 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     // Метод отвечает за размер ячеек и относиться к протоколу FlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constans.galeryItemWight, height: frame.height)
+        return CGSize(width: Constans.galeryItemWight, height: frame.height * 0.95)
     }
     
     required init?(coder: NSCoder) {
